@@ -1,705 +1,1282 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VELVET & BEAN Co. — Artisan Coffee & Micro-Roastery</title>
-    
+
     <!-- Bootstrap 5.3 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <!-- FontAwesome 6 Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 512'><path fill='%23000000' d='M96 64c0-17.7 14.3-32 32-32h320c17.7 0 32 14.3 32 32v192c0 53-43 96-96 96H192c-53 0-96-43-96-96V64zm320 32v128h32c17.7 0 32-14.3 32-32v-64c0-17.7-14.3-32-32-32h-32zm160 96c0 35.3-28.7 64-64 64h-32v32c0 88.4-71.6 160-160 160H192C103.6 480 32 408.4 32 320V64C32 28.7 60.7 0 96 0h320c35.3 0 64 28.7 64 64v32h32c53 0 96 43 96 96zM64 480h512c17.7 0 32 14.3 32 32s-14.3 32-32 32H64c-17.7 0-32-14.3-32-32s14.3-32 32-32z'/></svg>">
-    <link rel="stylesheet" href="styles.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 512'><path fill='%23000000' d='M96 64c0-17.7 14.3-32 32-32h320c17.7 0 32 14.3 32 32v192c0 53-43 96-96 96H192c-53 0-96-43-96-96V64zm320 32v128h32c17.7 0 32-14.3 32-32v-64c0-17.7-14.3-32-32-32h-32zm160 96c0 35.3-28.7 64-64 64h-32v32c0 88.4-71.6 160-160 160H192C103.6 480 32 408.4 32 320V64C32 28.7 60.7 0 96 0h320c35.3 0 64 28.7 64 64v32h32c53 0 96 43 96 96zM64 480h512c17.7 0 32 14.3 32 32s-14.3 32-32 32H64c-17.7 0-32-14.3-32-32s14.3-32 32-32z'/></svg>"
+    />
+    <link rel="stylesheet" href="styles.css" />
 
     <!-- Primary Meta Tags -->
-<meta name="description" content="VELVET & BEAN Co. is an artisan coffee micro-roastery offering ethically sourced direct-trade beans, precision espresso, and seasonal craft beverages.">
-<link rel="canonical" href="https://velvet-bean.vercel.app/">
+    <meta
+      name="description"
+      content="VELVET & BEAN Co. is an artisan coffee micro-roastery offering ethically sourced direct-trade beans, precision espresso, and seasonal craft beverages."
+    />
+    <link rel="canonical" href="https://velvet-bean.vercel.app/" />
 
-<!-- Open Graph / Social Media Meta Tags -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://velvet-bean.vercel.app/">
-<meta property="og:title" content="VELVET & BEAN Co. — Artisan Coffee & Micro-Roastery">
-<meta property="og:description" content="Ethically sourced direct-trade beans, precision-roasted in small batches daily. Experience coffee elevated to fine art.">
-<meta property="og:image" content="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=1200&q=80">
-</head>
-<body>
-
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://velvet-bean.vercel.app/" />
+    <meta
+      property="og:title"
+      content="VELVET & BEAN Co. — Artisan Coffee & Micro-Roastery"
+    />
+    <meta
+      property="og:description"
+      content="Ethically sourced direct-trade beans, precision-roasted in small batches daily. Experience coffee elevated to fine art."
+    />
+    <meta
+      property="og:image"
+      content="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=1200&q=80"
+    />
+  </head>
+  <body>
     <!-- 1. Navigation Bar -->
     <nav class="navbar navbar-expand-lg sticky-top py-3">
-        <div class="container">
-            <a class="navbar-brand d-flex align-items-center gap-2" href="#">
-                <span class="p-2 rounded-circle bg-mocha text-gold border border-glass d-inline-flex align-items-center justify-content-center" style="width:42px; height:42px;">
-                    <i class="fa-solid fa-mug-saucer fs-5"></i>
-                </span>
-                <span class="font-serif fw-bold text-oat fs-4 tracking-wide">VELVET <span class="text-gold">&</span> BEAN <span class="fs-7 text-gold">Co.</span></span>
-            </a>
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+          <span
+            class="p-2 rounded-circle bg-mocha text-gold border border-glass d-inline-flex align-items-center justify-content-center"
+            style="width: 42px; height: 42px"
+          >
+            <i class="fa-solid fa-mug-saucer fs-5"></i>
+          </span>
+          <span class="font-serif fw-bold text-oat fs-4 tracking-wide"
+            >VELVET <span class="text-gold">&</span> BEAN
+            <span class="fs-7 text-gold">Co.</span></span
+          >
+        </a>
 
-            <div class="d-flex align-items-center gap-3 d-lg-none">
-                <span class="badge-status d-flex align-items-center gap-2 py-1 px-2 fs-8">
-                    <span class="pulse-dot"></span> <span id="mobileStatusText">Open</span>
-                </span>
-                <button class="navbar-toggler text-oat border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <i class="fa-solid fa-bars fs-4 text-gold"></i>
-                </button>
-            </div>
-
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto gap-lg-4 py-3 py-lg-0">
-                    <li class="nav-item"><a class="nav-link active" href="#hero">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#menu">Craft Menu</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#roasting">The Craft</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#quiz">Brew Quiz</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#vibe">Ambient Vibe</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#locations">Store Finder</a></li>
-                </ul>
-
-                <div class="d-none d-lg-flex align-items-center gap-3">
-                    <div class="badge-status d-flex align-items-center gap-2 px-3 py-2">
-                        <span class="pulse-dot"></span>
-                        <span class="text-oat fs-8" id="navLiveStatus">Flagship Open Until 9:00 PM</span>
-                    </div>
-                    <a href="#menu" class="btn btn-gold btn-sm fs-7">
-                        <i class="fa-solid fa-bag-shopping me-1"></i> Order Pickup
-                    </a>
-                </div>
-            </div>
+        <div class="d-flex align-items-center gap-3 d-lg-none ms-auto">
+          <span
+            class="badge-status d-flex align-items-center gap-2 py-1 px-2 fs-8"
+          >
+            <span class="pulse-dot"></span>
+            <span id="mobileStatusText">Open</span>
+          </span>
+          <button
+            class="navbar-toggler text-oat border-0"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <i class="fa-solid fa-bars fs-4 text-gold"></i>
+          </button>
         </div>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto gap-lg-4 py-3 py-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="#hero">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#menu">Craft Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#roasting">The Craft</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#quiz">Brew Quiz</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#vibe">Ambient Vibe</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#locations">Store Finder</a>
+            </li>
+          </ul>
+
+          <div class="d-none d-lg-flex align-items-center gap-3">
+            <div class="badge-status d-flex align-items-center gap-2 px-3 py-2">
+              <span class="pulse-dot"></span>
+              <span class="text-oat fs-8" id="navLiveStatus"
+                >Flagship Open Until 9:00 PM</span
+              >
+            </div>
+            <a href="#menu" class="btn btn-gold btn-sm fs-7">
+              <i class="fa-solid fa-bag-shopping me-1"></i> Order Pickup
+            </a>
+          </div>
+        </div>
+      </div>
     </nav>
 
     <!-- 2. Hero Section -->
     <section id="hero" class="hero-section">
-        <div class="hero-media-wrapper">
-            <!-- Slow Motion Espresso Video Loop -->
-            <video class="hero-video" autoplay loop muted playsinline poster="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExam8wZmY2amgwd21vMzk1aWVoY3ZxdXE3dHg2dnN2dXl2OWk5dHUxZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Lw73Hgs8CS3MtFJrgZ/giphy.gif?auto=format&fit=crop&w=1200&q=80">
-                <source src="https://assets.mixkit.co/videos/preview/mixkit-barista-making-a-cup-of-coffee-41132-large.mp4" type="video/mp4">
-            </video>
-            <div class="hero-gradient-overlay"></div>
-        </div>
+      <div class="hero-media-wrapper">
+        <!-- Slow Motion Espresso Video Loop -->
+        <video
+          class="hero-video"
+          autoplay
+          loop
+          muted
+          playsinline
+          poster="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExam8wZmY2amgwd21vMzk1aWVoY3ZxdXE3dHg2dnN2dXl2OWk5dHUxZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Lw73Hgs8CS3MtFJrgZ/giphy.gif?auto=format&fit=crop&w=1200&q=80"
+        >
+          <source
+            src="https://assets.mixkit.co/videos/preview/mixkit-barista-making-a-cup-of-coffee-41132-large.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <div class="hero-gradient-overlay"></div>
+      </div>
 
-        <div class="container position-relative z-2 py-5">
-            <div class="row align-items-center">
-                <div class="col-lg-7">
-                    <div class="d-inline-flex align-items-center gap-2 badge bg-mocha text-gold border border-glass px-3 py-2 rounded-pill mb-3">
-                        <i class="fa-solid fa-fire-flame-curved text-gold"></i> MICRO-BATCH ROASTERY & ESPRESSO BAR
-                    </div>
-
-                    <h1 class="display-3 fw-bold text-oat mb-3 lh-sm">
-                        Artisan Coffee. <br>
-                        <span class="text-gold font-serif italic">Crafted for the Obsessed.</span>
-                    </h1>
-
-                    <p class="fs-5 text-muted-dark mb-4 pe-lg-5">
-                        Ethically sourced direct-trade beans, precision-roasted in small batches daily and extracted with surgical perfection. Experience coffee elevated to fine art.
-                    </p>
-
-                    <div class="d-flex flex-wrap align-items-center gap-3 mb-5">
-                        <a href="#menu" class="btn btn-gold">
-                            Explore Craft Menu <i class="fa-solid fa-arrow-down ms-2"></i>
-                        </a>
-                        <button class="btn btn-outline-oat" onclick="openCustomizerModal('Signature Velvet Latte', 6.50)">
-                            <i class="fa-solid fa-mug-hot me-2"></i> Order Express Pickup
-                        </button>
-                    </div>
-
-                    <!-- Live Today's Roast Badge Card -->
-                    <div class="glass-card p-3 d-inline-flex align-items-center gap-3 border border-glass">
-                        <div class="steam-container">
-                            <div class="steam-wrap">
-                                <span class="steam-particle"></span>
-                                <span class="steam-particle"></span>
-                                <span class="steam-particle"></span>
-                            </div>
-                            <div class="p-3 bg-mocha rounded-circle text-gold fs-4">
-                                <i class="fa-solid fa-seedling"></i>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="text-uppercase text-gold fs-8 fw-bold tracking-wider">Today's Single Origin Feature</div>
-                            <div class="fw-bold text-oat fs-6">Ethiopian Yirgacheffe — Grade 1 Natural</div>
-                            <div class="text-muted-dark fs-8">Notes of Jasmine, Wild Blueberry & Bergamot Citrus</div>
-                        </div>
-                    </div>
-
-                </div>
+      <div class="container position-relative z-2 py-5">
+        <div class="row align-items-center">
+          <div class="col-lg-7">
+            <div
+              class="d-inline-flex align-items-center gap-2 badge bg-mocha text-gold border border-glass px-3 py-2 rounded-pill mb-3"
+            >
+              <i class="fa-solid fa-fire-flame-curved text-gold"></i>
+              MICRO-BATCH ROASTERY & ESPRESSO BAR
             </div>
+
+            <h1 class="display-3 fw-bold text-oat mb-3 lh-sm">
+              Artisan Coffee. <br />
+              <span class="text-gold font-serif italic"
+                >Crafted for the Obsessed.</span
+              >
+            </h1>
+
+            <p class="fs-5 text-muted-dark mb-4 pe-lg-5">
+              Ethically sourced direct-trade beans, precision-roasted in small
+              batches daily and extracted with surgical perfection. Experience
+              coffee elevated to fine art.
+            </p>
+
+            <div class="d-flex flex-wrap align-items-center gap-3 mb-5">
+              <a href="#menu" class="btn btn-gold">
+                Explore Craft Menu <i class="fa-solid fa-arrow-down ms-2"></i>
+              </a>
+              <button
+                class="btn btn-outline-oat"
+                onclick="openCustomizerModal('Signature Velvet Latte', 6.5)"
+              >
+                <i class="fa-solid fa-mug-hot me-2"></i> Order Express Pickup
+              </button>
+            </div>
+
+            <!-- Live Today's Roast Badge Card -->
+            <div
+              class="glass-card p-3 d-inline-flex align-items-center gap-3 border border-glass"
+            >
+              <div class="steam-container">
+                <div class="steam-wrap">
+                  <span class="steam-particle"></span>
+                  <span class="steam-particle"></span>
+                  <span class="steam-particle"></span>
+                </div>
+                <div class="p-3 bg-mocha rounded-circle text-gold fs-4">
+                  <i class="fa-solid fa-seedling"></i>
+                </div>
+              </div>
+              <div>
+                <div
+                  class="text-uppercase text-gold fs-8 fw-bold tracking-wider"
+                >
+                  Today's Single Origin Feature
+                </div>
+                <div class="fw-bold text-oat fs-6">
+                  Ethiopian Yirgacheffe — Grade 1 Natural
+                </div>
+                <div class="text-muted-dark fs-8">
+                  Notes of Jasmine, Wild Blueberry & Bergamot Citrus
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- 3. Interactive Menu Section -->
     <section id="menu" class="py-5 bg-espresso border-top border-glass">
-        <div class="container py-4">
-            <div class="text-center max-w-2xl mx-auto mb-5">
-                <span class="badge bg-mocha text-gold border border-glass px-3 py-2 rounded-pill mb-2 fs-8">SEASONAL SELECTION</span>
-                <h2 class="display-5 fw-bold text-oat font-serif">The Artisan Menu</h2>
-                <p class="text-muted-dark">Handcrafted hot beverages, chilled slow drip cold brews, and freshly baked pastries.</p>
+      <div class="container py-4">
+        <div class="text-center max-w-2xl mx-auto mb-5">
+          <span
+            class="badge bg-mocha text-gold border border-glass px-3 py-2 rounded-pill mb-2 fs-8"
+            >SEASONAL SELECTION</span
+          >
+          <h2 class="display-5 fw-bold text-oat font-serif">
+            The Artisan Menu
+          </h2>
+          <p class="text-muted-dark">
+            Handcrafted hot beverages, chilled slow drip cold brews, and freshly
+            baked pastries.
+          </p>
 
-                <!-- Category Filters -->
-                <div class="d-flex flex-wrap justify-content-center gap-2 mt-4">
-                    <button class="menu-tab-btn active" onclick="filterMenu('all', this)">All Items</button>
-                    <button class="menu-tab-btn" onclick="filterMenu('espresso', this)">Espresso Bar</button>
-                    <button class="menu-tab-btn" onclick="filterMenu('pourover', this)">Pour Over & Origins</button>
-                    <button class="menu-tab-btn" onclick="filterMenu('coldbrew', this)">Cold Brews</button>
-                    <button class="menu-tab-btn" onclick="filterMenu('pastry', this)">Artisanal Pastries</button>
-                </div>
-            </div>
-
-            <!-- Menu Grid -->
-            <div class="row g-4" id="menuGrid">
-                
-                <!-- Item 1 -->
-                <div class="col-md-6 col-lg-4 menu-item" data-category="espresso">
-                    <div class="menu-card h-100 d-flex flex-column">
-                        <div class="menu-img-holder">
-                            <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=800&q=80" alt="Velvet Latte">
-                            <span class="badge bg-mocha text-gold border border-glass position-absolute top-0 end-0 m-3 fs-8">Popular</span>
-                        </div>
-                        <div class="p-4 flex-grow-1 d-flex flex-column justify-content-between">
-                            <div>
-                                <div class="d-flex justify-content-between align-items-center mb-2">
-                                    <h5 class="fw-bold text-oat font-serif mb-0">Signature Velvet Latte</h5>
-                                    <span class="text-gold fw-bold fs-5">$6.50</span>
-                                </div>
-                                <p class="text-muted-dark fs-7 mb-3">Double ristretto shot, house-made Madagascar vanilla bean syrup, and micro-foamed oat milk.</p>
-                                <div class="d-flex gap-2 mb-3">
-                                    <span class="badge bg-espresso text-muted-dark border border-glass fs-8">Oat Milk</span>
-                                    <span class="badge bg-espresso text-muted-dark border border-glass fs-8">Double Shot</span>
-                                </div>
-                            </div>
-                            <button class="btn btn-outline-oat w-100 fs-7" onclick="openCustomizerModal('Signature Velvet Latte', 6.50)">
-                                <i class="fa-solid fa-sliders me-1"></i> Customize & Order
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Item 2 -->
-                <div class="col-md-6 col-lg-4 menu-item" data-category="pourover">
-                    <div class="menu-card h-100 d-flex flex-column">
-                        <div class="menu-img-holder">
-                            <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80" alt="Pour Over">
-                        </div>
-                        <div class="p-4 flex-grow-1 d-flex flex-column justify-content-between">
-                            <div>
-                                <div class="d-flex justify-content-between align-items-center mb-2">
-                                    <h5 class="fw-bold text-oat font-serif mb-0">Geisha Single Origin V60</h5>
-                                    <span class="text-gold fw-bold fs-5">$8.00</span>
-                                </div>
-                                <p class="text-muted-dark fs-7 mb-3">Panama Esmeralda Geisha brewed on Hario V60. Vibrant notes of peach blossom and earl grey tea.</p>
-                                <div class="d-flex gap-2 mb-3">
-                                    <span class="badge bg-espresso text-muted-dark border border-glass fs-8">Light Roast</span>
-                                    <span class="badge bg-espresso text-muted-dark border border-glass fs-8">V60 Pour Over</span>
-                                </div>
-                            </div>
-                            <button class="btn btn-outline-oat w-100 fs-7" onclick="openCustomizerModal('Geisha Single Origin V60', 8.00)">
-                                <i class="fa-solid fa-sliders me-1"></i> Customize & Order
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Item 3 -->
-                <div class="col-md-6 col-lg-4 menu-item" data-category="coldbrew">
-                    <div class="menu-card h-100 d-flex flex-column">
-                        <div class="menu-img-holder">
-                            <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=800&q=80" alt="Nitro Cold Brew">
-                        </div>
-                        <div class="p-4 flex-grow-1 d-flex flex-column justify-content-between">
-                            <div>
-                                <div class="d-flex justify-content-between align-items-center mb-2">
-                                    <h5 class="fw-bold text-oat font-serif mb-0">Nitro Cascade Cold Brew</h5>
-                                    <span class="text-gold fw-bold fs-5">$6.75</span>
-                                </div>
-                                <p class="text-muted-dark fs-7 mb-3">18-hour slow steeped Colombian cold brew infused with pure nitrogen for a velvety stout head.</p>
-                                <div class="d-flex gap-2 mb-3">
-                                    <span class="badge bg-espresso text-muted-dark border border-glass fs-8">Nitrogen Infused</span>
-                                    <span class="badge bg-espresso text-muted-dark border border-glass fs-8">Zero Sugar</span>
-                                </div>
-                            </div>
-                            <button class="btn btn-outline-oat w-100 fs-7" onclick="openCustomizerModal('Nitro Cascade Cold Brew', 6.75)">
-                                <i class="fa-solid fa-sliders me-1"></i> Customize & Order
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Item 4 -->
-                <div class="col-md-6 col-lg-4 menu-item" data-category="espresso">
-                    <div class="menu-card h-100 d-flex flex-column">
-                        <div class="menu-img-holder">
-                            <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=800&q=80" alt="Cortado">
-                        </div>
-                        <div class="p-4 flex-grow-1 d-flex flex-column justify-content-between">
-                            <div>
-                                <div class="d-flex justify-content-between align-items-center mb-2">
-                                    <h5 class="fw-bold text-oat font-serif mb-0">Amber Honey Cortado</h5>
-                                    <span class="text-gold fw-bold fs-5">$5.25</span>
-                                </div>
-                                <p class="text-muted-dark fs-7 mb-3">Equal parts double espresso and silky steamed milk sweetened with raw local wildflower honey.</p>
-                                <div class="d-flex gap-2 mb-3">
-                                    <span class="badge bg-espresso text-muted-dark border border-glass fs-8">4oz Classic</span>
-                                    <span class="badge bg-espresso text-muted-dark border border-glass fs-8">Raw Honey</span>
-                                </div>
-                            </div>
-                            <button class="btn btn-outline-oat w-100 fs-7" onclick="openCustomizerModal('Amber Honey Cortado', 5.25)">
-                                <i class="fa-solid fa-sliders me-1"></i> Customize & Order
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Item 5 -->
-                <div class="col-md-6 col-lg-4 menu-item" data-category="pastry">
-                    <div class="menu-card h-100 d-flex flex-column">
-                        <div class="menu-img-holder">
-                            <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=800&q=80" alt="Croissant">
-                        </div>
-                        <div class="p-4 flex-grow-1 d-flex flex-column justify-content-between">
-                            <div>
-                                <div class="d-flex justify-content-between align-items-center mb-2">
-                                    <h5 class="fw-bold text-oat font-serif mb-0">Pistachio Cardamom Croissant</h5>
-                                    <span class="text-gold fw-bold fs-5">$5.75</span>
-                                </div>
-                                <p class="text-muted-dark fs-7 mb-3">Flaky French butter croissant filled with pistachio frangipane cream and dusted with green cardamom.</p>
-                                <div class="d-flex gap-2 mb-3">
-                                    <span class="badge bg-espresso text-muted-dark border border-glass fs-8">Baked Fresh 6 AM</span>
-                                </div>
-                            </div>
-                            <button class="btn btn-outline-oat w-100 fs-7" onclick="openCustomizerModal('Pistachio Cardamom Croissant', 5.75)">
-                                <i class="fa-solid fa-bag-shopping me-1"></i> Add To Pickup
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Item 6 -->
-                <div class="col-md-6 col-lg-4 menu-item" data-category="coldbrew">
-                    <div class="menu-card h-100 d-flex flex-column">
-                        <div class="menu-img-holder">
-                            <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=800&q=80" alt="Iced Tonic">
-                        </div>
-                        <div class="p-4 flex-grow-1 d-flex flex-column justify-content-between">
-                            <div>
-                                <div class="d-flex justify-content-between align-items-center mb-2">
-                                    <h5 class="fw-bold text-oat font-serif mb-0">Espresso Tonic & Rosemary</h5>
-                                    <span class="text-gold fw-bold fs-5">$6.25</span>
-                                </div>
-                                <p class="text-muted-dark fs-7 mb-3">Single-origin espresso layered over artisanal botanical tonic water and fresh slap-activated rosemary.</p>
-                                <div class="d-flex gap-2 mb-3">
-                                    <span class="badge bg-espresso text-muted-dark border border-glass fs-8">Refreshing</span>
-                                    <span class="badge bg-espresso text-muted-dark border border-glass fs-8">Sparkling</span>
-                                </div>
-                            </div>
-                            <button class="btn btn-outline-oat w-100 fs-7" onclick="openCustomizerModal('Espresso Tonic & Rosemary', 6.25)">
-                                <i class="fa-solid fa-sliders me-1"></i> Customize & Order
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+          <!-- Category Filters -->
+          <div class="d-flex flex-wrap justify-content-center gap-2 mt-4">
+            <button
+              class="menu-tab-btn active"
+              onclick="filterMenu('all', this)"
+            >
+              All Items
+            </button>
+            <button class="menu-tab-btn" onclick="filterMenu('espresso', this)">
+              Espresso Bar
+            </button>
+            <button class="menu-tab-btn" onclick="filterMenu('pourover', this)">
+              Pour Over & Origins
+            </button>
+            <button class="menu-tab-btn" onclick="filterMenu('coldbrew', this)">
+              Cold Brews
+            </button>
+            <button class="menu-tab-btn" onclick="filterMenu('pastry', this)">
+              Artisanal Pastries
+            </button>
+          </div>
         </div>
+
+        <!-- Menu Grid -->
+        <div class="row g-4" id="menuGrid">
+          <!-- Item 1 -->
+          <div class="col-md-6 col-lg-4 menu-item" data-category="espresso">
+            <div class="menu-card h-100 d-flex flex-column">
+              <div class="menu-img-holder">
+                <img
+                  src="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=800&q=80"
+                  alt="Velvet Latte"
+                />
+                <span
+                  class="badge bg-mocha text-gold border border-glass position-absolute top-0 end-0 m-3 fs-8"
+                  >Popular</span
+                >
+              </div>
+              <div
+                class="p-4 flex-grow-1 d-flex flex-column justify-content-between"
+              >
+                <div>
+                  <div
+                    class="d-flex justify-content-between align-items-center mb-2"
+                  >
+                    <h5 class="fw-bold text-oat font-serif mb-0">
+                      Signature Velvet Latte
+                    </h5>
+                    <span class="text-gold fw-bold fs-5">$6.50</span>
+                  </div>
+                  <p class="text-muted-dark fs-7 mb-3">
+                    Double ristretto shot, house-made Madagascar vanilla bean
+                    syrup, and micro-foamed oat milk.
+                  </p>
+                  <div class="d-flex gap-2 mb-3">
+                    <span
+                      class="badge bg-espresso text-muted-dark border border-glass fs-8"
+                      >Oat Milk</span
+                    >
+                    <span
+                      class="badge bg-espresso text-muted-dark border border-glass fs-8"
+                      >Double Shot</span
+                    >
+                  </div>
+                </div>
+                <button
+                  class="btn btn-outline-oat w-100 fs-7"
+                  onclick="openCustomizerModal('Signature Velvet Latte', 6.5)"
+                >
+                  <i class="fa-solid fa-sliders me-1"></i> Customize & Order
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="col-md-6 col-lg-4 menu-item" data-category="pourover">
+            <div class="menu-card h-100 d-flex flex-column">
+              <div class="menu-img-holder">
+                <img
+                  src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80"
+                  alt="Pour Over"
+                />
+              </div>
+              <div
+                class="p-4 flex-grow-1 d-flex flex-column justify-content-between"
+              >
+                <div>
+                  <div
+                    class="d-flex justify-content-between align-items-center mb-2"
+                  >
+                    <h5 class="fw-bold text-oat font-serif mb-0">
+                      Geisha Single Origin V60
+                    </h5>
+                    <span class="text-gold fw-bold fs-5">$8.00</span>
+                  </div>
+                  <p class="text-muted-dark fs-7 mb-3">
+                    Panama Esmeralda Geisha brewed on Hario V60. Vibrant notes
+                    of peach blossom and earl grey tea.
+                  </p>
+                  <div class="d-flex gap-2 mb-3">
+                    <span
+                      class="badge bg-espresso text-muted-dark border border-glass fs-8"
+                      >Light Roast</span
+                    >
+                    <span
+                      class="badge bg-espresso text-muted-dark border border-glass fs-8"
+                      >V60 Pour Over</span
+                    >
+                  </div>
+                </div>
+                <button
+                  class="btn btn-outline-oat w-100 fs-7"
+                  onclick="openCustomizerModal('Geisha Single Origin V60', 8.0)"
+                >
+                  <i class="fa-solid fa-sliders me-1"></i> Customize & Order
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="col-md-6 col-lg-4 menu-item" data-category="coldbrew">
+            <div class="menu-card h-100 d-flex flex-column">
+              <div class="menu-img-holder">
+                <img
+                  src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=800&q=80"
+                  alt="Nitro Cold Brew"
+                />
+              </div>
+              <div
+                class="p-4 flex-grow-1 d-flex flex-column justify-content-between"
+              >
+                <div>
+                  <div
+                    class="d-flex justify-content-between align-items-center mb-2"
+                  >
+                    <h5 class="fw-bold text-oat font-serif mb-0">
+                      Nitro Cascade Cold Brew
+                    </h5>
+                    <span class="text-gold fw-bold fs-5">$6.75</span>
+                  </div>
+                  <p class="text-muted-dark fs-7 mb-3">
+                    18-hour slow steeped Colombian cold brew infused with pure
+                    nitrogen for a velvety stout head.
+                  </p>
+                  <div class="d-flex gap-2 mb-3">
+                    <span
+                      class="badge bg-espresso text-muted-dark border border-glass fs-8"
+                      >Nitrogen Infused</span
+                    >
+                    <span
+                      class="badge bg-espresso text-muted-dark border border-glass fs-8"
+                      >Zero Sugar</span
+                    >
+                  </div>
+                </div>
+                <button
+                  class="btn btn-outline-oat w-100 fs-7"
+                  onclick="openCustomizerModal('Nitro Cascade Cold Brew', 6.75)"
+                >
+                  <i class="fa-solid fa-sliders me-1"></i> Customize & Order
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="col-md-6 col-lg-4 menu-item" data-category="espresso">
+            <div class="menu-card h-100 d-flex flex-column">
+              <div class="menu-img-holder">
+                <img
+                  src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=800&q=80"
+                  alt="Cortado"
+                />
+              </div>
+              <div
+                class="p-4 flex-grow-1 d-flex flex-column justify-content-between"
+              >
+                <div>
+                  <div
+                    class="d-flex justify-content-between align-items-center mb-2"
+                  >
+                    <h5 class="fw-bold text-oat font-serif mb-0">
+                      Amber Honey Cortado
+                    </h5>
+                    <span class="text-gold fw-bold fs-5">$5.25</span>
+                  </div>
+                  <p class="text-muted-dark fs-7 mb-3">
+                    Equal parts double espresso and silky steamed milk sweetened
+                    with raw local wildflower honey.
+                  </p>
+                  <div class="d-flex gap-2 mb-3">
+                    <span
+                      class="badge bg-espresso text-muted-dark border border-glass fs-8"
+                      >4oz Classic</span
+                    >
+                    <span
+                      class="badge bg-espresso text-muted-dark border border-glass fs-8"
+                      >Raw Honey</span
+                    >
+                  </div>
+                </div>
+                <button
+                  class="btn btn-outline-oat w-100 fs-7"
+                  onclick="openCustomizerModal('Amber Honey Cortado', 5.25)"
+                >
+                  <i class="fa-solid fa-sliders me-1"></i> Customize & Order
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="col-md-6 col-lg-4 menu-item" data-category="pastry">
+            <div class="menu-card h-100 d-flex flex-column">
+              <div class="menu-img-holder">
+                <img
+                  src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=800&q=80"
+                  alt="Croissant"
+                />
+              </div>
+              <div
+                class="p-4 flex-grow-1 d-flex flex-column justify-content-between"
+              >
+                <div>
+                  <div
+                    class="d-flex justify-content-between align-items-center mb-2"
+                  >
+                    <h5 class="fw-bold text-oat font-serif mb-0">
+                      Pistachio Cardamom Croissant
+                    </h5>
+                    <span class="text-gold fw-bold fs-5">$5.75</span>
+                  </div>
+                  <p class="text-muted-dark fs-7 mb-3">
+                    Flaky French butter croissant filled with pistachio
+                    frangipane cream and dusted with green cardamom.
+                  </p>
+                  <div class="d-flex gap-2 mb-3">
+                    <span
+                      class="badge bg-espresso text-muted-dark border border-glass fs-8"
+                      >Baked Fresh 6 AM</span
+                    >
+                  </div>
+                </div>
+                <button
+                  class="btn btn-outline-oat w-100 fs-7"
+                  onclick="
+                    openCustomizerModal('Pistachio Cardamom Croissant', 5.75)
+                  "
+                >
+                  <i class="fa-solid fa-bag-shopping me-1"></i> Add To Pickup
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 6 -->
+          <div class="col-md-6 col-lg-4 menu-item" data-category="coldbrew">
+            <div class="menu-card h-100 d-flex flex-column">
+              <div class="menu-img-holder">
+                <img
+                  src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=800&q=80"
+                  alt="Iced Tonic"
+                />
+              </div>
+              <div
+                class="p-4 flex-grow-1 d-flex flex-column justify-content-between"
+              >
+                <div>
+                  <div
+                    class="d-flex justify-content-between align-items-center mb-2"
+                  >
+                    <h5 class="fw-bold text-oat font-serif mb-0">
+                      Espresso Tonic & Rosemary
+                    </h5>
+                    <span class="text-gold fw-bold fs-5">$6.25</span>
+                  </div>
+                  <p class="text-muted-dark fs-7 mb-3">
+                    Single-origin espresso layered over artisanal botanical
+                    tonic water and fresh slap-activated rosemary.
+                  </p>
+                  <div class="d-flex gap-2 mb-3">
+                    <span
+                      class="badge bg-espresso text-muted-dark border border-glass fs-8"
+                      >Refreshing</span
+                    >
+                    <span
+                      class="badge bg-espresso text-muted-dark border border-glass fs-8"
+                      >Sparkling</span
+                    >
+                  </div>
+                </div>
+                <button
+                  class="btn btn-outline-oat w-100 fs-7"
+                  onclick="
+                    openCustomizerModal('Espresso Tonic & Rosemary', 6.25)
+                  "
+                >
+                  <i class="fa-solid fa-sliders me-1"></i> Customize & Order
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- 4. The Roasting Craft (Interactive GIF/Video Grid) -->
     <section id="roasting" class="py-5 bg-mocha border-top border-glass">
-        <div class="container py-4">
-            <div class="text-center max-w-2xl mx-auto mb-5">
-                <span class="badge bg-espresso text-gold border border-glass px-3 py-2 rounded-pill mb-2 fs-8">BEHIND THE BEAN</span>
-                <h2 class="display-5 fw-bold text-oat font-serif">The Roasting & Extraction Process</h2>
-                <p class="text-muted-dark">From high-altitude shade farms to your ceramic cup—our 3-step obsession with perfection.</p>
-            </div>
-
-            <div class="row g-4">
-                <!-- Step 1 -->
-                <div class="col-md-4">
-                    <div class="process-card h-100">
-                        <div class="process-media">
-                            <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=800&q=80" alt="Ethical Sourcing">
-                            <span class="badge bg-mocha text-gold position-absolute bottom-0 start-0 m-3 border border-glass">01. Direct Trade</span>
-                        </div>
-                        <div class="p-4">
-                            <h5 class="fw-bold text-oat font-serif mb-2">1. Ethical Farm Direct Sourcing</h5>
-                            <p class="text-muted-dark fs-7 mb-0">We work directly with smallholder farmers in Huila, Yirgacheffe, and Antigua, paying 40% above fair-trade minimums for top 1% harvest lots.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Step 2 -->
-                <div class="col-md-4">
-                    <div class="process-card h-100">
-                        <div class="process-media">
-                            <!-- High Resolution GIF/Video preview representing roasting drum -->
-                            <img src="https://images.unsplash.com/photo-1518832553480-cd0e625ed3e6?auto=format&fit=crop&w=800&q=80" alt="Roasting Drum">
-                            <span class="badge bg-mocha text-gold position-absolute bottom-0 start-0 m-3 border border-glass">02. Drum Precision</span>
-                        </div>
-                        <div class="p-4">
-                            <h5 class="fw-bold text-oat font-serif mb-2">2. Precision Small-Batch Roasting</h5>
-                            <p class="text-muted-dark fs-7 mb-0">Roaster curves monitored live via thermal sensors on our cast-iron San Franciscan drum roaster to highlight natural floral and fruit notes.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Step 3 -->
-                <div class="col-md-4">
-                    <div class="process-card h-100">
-                        <div class="process-media">
-                            <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=800&q=80" alt="Extraction">
-                            <span class="badge bg-mocha text-gold position-absolute bottom-0 start-0 m-3 border border-glass">03. Surgical Bar</span>
-                        </div>
-                        <div class="p-4">
-                            <h5 class="fw-bold text-oat font-serif mb-2">3. Precise Pressure Extraction</h5>
-                            <p class="text-muted-dark fs-7 mb-0">Customized Synesso MVP machines engineered to control pre-infusion pressure profiles, extracting ideal balance and crema density.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="container py-4">
+        <div class="text-center max-w-2xl mx-auto mb-5">
+          <span
+            class="badge bg-espresso text-gold border border-glass px-3 py-2 rounded-pill mb-2 fs-8"
+            >BEHIND THE BEAN</span
+          >
+          <h2 class="display-5 fw-bold text-oat font-serif">
+            The Roasting & Extraction Process
+          </h2>
+          <p class="text-muted-dark">
+            From high-altitude shade farms to your ceramic cup—our 3-step
+            obsession with perfection.
+          </p>
         </div>
+
+        <div class="row g-4">
+          <!-- Step 1 -->
+          <div class="col-md-4">
+            <div class="process-card h-100">
+              <div class="process-media">
+                <img
+                  src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=800&q=80"
+                  alt="Ethical Sourcing"
+                />
+                <span
+                  class="badge bg-mocha text-gold position-absolute bottom-0 start-0 m-3 border border-glass"
+                  >01. Direct Trade</span
+                >
+              </div>
+              <div class="p-4">
+                <h5 class="fw-bold text-oat font-serif mb-2">
+                  1. Ethical Farm Direct Sourcing
+                </h5>
+                <p class="text-muted-dark fs-7 mb-0">
+                  We work directly with smallholder farmers in Huila,
+                  Yirgacheffe, and Antigua, paying 40% above fair-trade minimums
+                  for top 1% harvest lots.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="col-md-4">
+            <div class="process-card h-100">
+              <div class="process-media">
+                <!-- High Resolution GIF/Video preview representing roasting drum -->
+                <img
+                  src="https://images.unsplash.com/photo-1518832553480-cd0e625ed3e6?auto=format&fit=crop&w=800&q=80"
+                  alt="Roasting Drum"
+                />
+                <span
+                  class="badge bg-mocha text-gold position-absolute bottom-0 start-0 m-3 border border-glass"
+                  >02. Drum Precision</span
+                >
+              </div>
+              <div class="p-4">
+                <h5 class="fw-bold text-oat font-serif mb-2">
+                  2. Precision Small-Batch Roasting
+                </h5>
+                <p class="text-muted-dark fs-7 mb-0">
+                  Roaster curves monitored live via thermal sensors on our
+                  cast-iron San Franciscan drum roaster to highlight natural
+                  floral and fruit notes.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="col-md-4">
+            <div class="process-card h-100">
+              <div class="process-media">
+                <img
+                  src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=800&q=80"
+                  alt="Extraction"
+                />
+                <span
+                  class="badge bg-mocha text-gold position-absolute bottom-0 start-0 m-3 border border-glass"
+                  >03. Surgical Bar</span
+                >
+              </div>
+              <div class="p-4">
+                <h5 class="fw-bold text-oat font-serif mb-2">
+                  3. Precise Pressure Extraction
+                </h5>
+                <p class="text-muted-dark fs-7 mb-0">
+                  Customized Synesso MVP machines engineered to control
+                  pre-infusion pressure profiles, extracting ideal balance and
+                  crema density.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- 5. Interactive Flavor Profile Quiz Widget -->
-    <section id="quiz" class="py-5 bg-espresso border-top border-glass position-relative">
-        <div class="container py-4">
-            <div class="row align-items-center g-4 g-lg-5">
-                <div class="col-lg-5">
-                    <span class="badge bg-mocha text-gold border border-glass px-3 py-2 rounded-pill mb-3 fs-8">PERSONALIZED BREW FINDER</span>
-                    <h2 class="display-5 fw-bold text-oat font-serif mb-3">Find Your Ideal Coffee Match</h2>
-                    <p class="text-muted-dark mb-4">Not sure what to order? Take our 3-second barista quiz to uncover the roast profile matched to your palate.</p>
-                    
-                    <div class="glass-card p-4 border border-glass">
-                        <div class="d-flex align-items-center gap-3">
-                            <div class="p-3 bg-espresso rounded-circle text-gold fs-3">
-                                <i class="fa-solid fa-wand-magic-sparkles"></i>
-                            </div>
-                            <div>
-                                <h6 class="fw-bold text-oat mb-0">Barista Recommendation Engine</h6>
-                                <p class="text-muted-dark fs-8 mb-0">Based on flavor science & extraction chemistry.</p>
-                            </div>
-                        </div>
-                    </div>
+    <section
+      id="quiz"
+      class="py-5 bg-espresso border-top border-glass position-relative"
+    >
+      <div class="container py-4">
+        <div class="row align-items-center g-4 g-lg-5">
+          <div class="col-lg-5">
+            <span
+              class="badge bg-mocha text-gold border border-glass px-3 py-2 rounded-pill mb-3 fs-8"
+              >PERSONALIZED BREW FINDER</span
+            >
+            <h2 class="display-5 fw-bold text-oat font-serif mb-3">
+              Find Your Ideal Coffee Match
+            </h2>
+            <p class="text-muted-dark mb-4">
+              Not sure what to order? Take our 3-second barista quiz to uncover
+              the roast profile matched to your palate.
+            </p>
+
+            <div class="glass-card p-4 border border-glass">
+              <div class="d-flex align-items-center gap-3">
+                <div class="p-3 bg-espresso rounded-circle text-gold fs-3">
+                  <i class="fa-solid fa-wand-magic-sparkles"></i>
                 </div>
-
-                <div class="col-lg-7">
-                    <div class="glass-card p-4 p-sm-5 border border-glass" id="quizCard">
-                        
-                        <!-- Step 1 -->
-                        <div class="quiz-step" id="step1">
-                            <div class="d-flex justify-content-between align-items-center mb-3">
-                                <span class="text-gold fs-8 fw-bold">QUESTION 1 OF 3</span>
-                                <span class="badge bg-mocha text-muted-dark border border-glass fs-8">Roast Level</span>
-                            </div>
-                            <h4 class="fw-bold text-oat font-serif mb-4">How do you prefer your roast profile?</h4>
-                            
-                            <div class="d-flex flex-column gap-3 mb-4">
-                                <button class="quiz-opt-btn" onclick="selectQuizOpt(1, 'light', this)">
-                                    <strong class="d-block text-oat">Light & Bright</strong>
-                                    <span class="fs-8 text-muted-dark">Floral notes, fruity acidity, tea-like clarity.</span>
-                                </button>
-                                <button class="quiz-opt-btn" onclick="selectQuizOpt(1, 'medium', this)">
-                                    <strong class="d-block text-oat">Medium & Balanced</strong>
-                                    <span class="fs-8 text-muted-dark">Caramel sweetness, milk chocolate, balanced body.</span>
-                                </button>
-                                <button class="quiz-opt-btn" onclick="selectQuizOpt(1, 'dark', this)">
-                                    <strong class="d-block text-oat">Deep & Bold</strong>
-                                    <span class="fs-8 text-muted-dark">Dark cocoa, smoky roasted nuts, low acidity.</span>
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- Step 2 -->
-                        <div class="quiz-step d-none" id="step2">
-                            <div class="d-flex justify-content-between align-items-center mb-3">
-                                <span class="text-gold fs-8 fw-bold">QUESTION 2 OF 3</span>
-                                <span class="badge bg-mocha text-muted-dark border border-glass fs-8">Milk & Texturing</span>
-                            </div>
-                            <h4 class="fw-bold text-oat font-serif mb-4">How do you take your beverage?</h4>
-                            
-                            <div class="d-flex flex-column gap-3 mb-4">
-                                <button class="quiz-opt-btn" onclick="selectQuizOpt(2, 'black', this)">
-                                    <strong class="d-block text-oat">Pure Black</strong>
-                                    <span class="fs-8 text-muted-dark">Straight espresso or pour over—no dairy added.</span>
-                                </button>
-                                <button class="quiz-opt-btn" onclick="selectQuizOpt(2, 'steamed', this)">
-                                    <strong class="d-block text-oat">Silky Steamed Milk</strong>
-                                    <span class="fs-8 text-muted-dark">Micro-foamed oat, almond, or whole milk.</span>
-                                </button>
-                                <button class="quiz-opt-btn" onclick="selectQuizOpt(2, 'iced', this)">
-                                    <strong class="d-block text-oat">Chilled over Ice</strong>
-                                    <span class="fs-8 text-muted-dark">Slow steep cold brew or iced latte.</span>
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- Result Step -->
-                        <div class="quiz-step d-none" id="stepResult">
-                            <div class="text-center py-3">
-                                <span class="badge bg-mocha text-gold border border-glass px-3 py-1 rounded-pill mb-3 fs-8">YOUR MATCHED BREW</span>
-                                <h3 class="fw-bold text-oat font-serif mb-2" id="recommendTitle">Signature Velvet Latte</h3>
-                                <p class="text-muted-dark fs-7 mb-4" id="recommendDesc">A velvety blend of espresso with Madagascar vanilla and creamy oat micro-foam.</p>
-
-                                <div class="p-3 bg-espresso rounded-3 border border-glass d-inline-block text-start mb-4 max-w-sm w-100">
-                                    <div class="d-flex justify-content-between fs-8 text-muted-dark mb-1">
-                                        <span>Flavor Profile:</span> <strong class="text-gold" id="recommendNotes">Caramel & Vanilla</strong>
-                                    </div>
-                                    <div class="d-flex justify-content-between fs-8 text-muted-dark">
-                                        <span>Recommended Milk:</span> <strong class="text-oat" id="recommendMilk">Oat Milk</strong>
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <button class="btn btn-gold w-100 py-3 font-semibold" onclick="orderRecommended()">
-                                        Customize & Order This Brew <i class="fa-solid fa-arrow-right ms-2"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
+                <div>
+                  <h6 class="fw-bold text-oat mb-0">
+                    Barista Recommendation Engine
+                  </h6>
+                  <p class="text-muted-dark fs-8 mb-0">
+                    Based on flavor science & extraction chemistry.
+                  </p>
                 </div>
+              </div>
             </div>
+          </div>
+
+          <div class="col-lg-7">
+            <div
+              class="glass-card p-4 p-sm-5 border border-glass"
+              id="quizCard"
+            >
+              <!-- Step 1 -->
+              <div class="quiz-step" id="step1">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-3"
+                >
+                  <span class="text-gold fs-8 fw-bold">QUESTION 1 OF 3</span>
+                  <span
+                    class="badge bg-mocha text-muted-dark border border-glass fs-8"
+                    >Roast Level</span
+                  >
+                </div>
+                <h4 class="fw-bold text-oat font-serif mb-4">
+                  How do you prefer your roast profile?
+                </h4>
+
+                <div class="d-flex flex-column gap-3 mb-4">
+                  <button
+                    class="quiz-opt-btn"
+                    onclick="selectQuizOpt(1, 'light', this)"
+                  >
+                    <strong class="d-block text-oat">Light & Bright</strong>
+                    <span class="fs-8 text-muted-dark"
+                      >Floral notes, fruity acidity, tea-like clarity.</span
+                    >
+                  </button>
+                  <button
+                    class="quiz-opt-btn"
+                    onclick="selectQuizOpt(1, 'medium', this)"
+                  >
+                    <strong class="d-block text-oat">Medium & Balanced</strong>
+                    <span class="fs-8 text-muted-dark"
+                      >Caramel sweetness, milk chocolate, balanced body.</span
+                    >
+                  </button>
+                  <button
+                    class="quiz-opt-btn"
+                    onclick="selectQuizOpt(1, 'dark', this)"
+                  >
+                    <strong class="d-block text-oat">Deep & Bold</strong>
+                    <span class="fs-8 text-muted-dark"
+                      >Dark cocoa, smoky roasted nuts, low acidity.</span
+                    >
+                  </button>
+                </div>
+              </div>
+
+              <!-- Step 2 -->
+              <div class="quiz-step d-none" id="step2">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-3"
+                >
+                  <span class="text-gold fs-8 fw-bold">QUESTION 2 OF 3</span>
+                  <span
+                    class="badge bg-mocha text-muted-dark border border-glass fs-8"
+                    >Milk & Texturing</span
+                  >
+                </div>
+                <h4 class="fw-bold text-oat font-serif mb-4">
+                  How do you take your beverage?
+                </h4>
+
+                <div class="d-flex flex-column gap-3 mb-4">
+                  <button
+                    class="quiz-opt-btn"
+                    onclick="selectQuizOpt(2, 'black', this)"
+                  >
+                    <strong class="d-block text-oat">Pure Black</strong>
+                    <span class="fs-8 text-muted-dark"
+                      >Straight espresso or pour over—no dairy added.</span
+                    >
+                  </button>
+                  <button
+                    class="quiz-opt-btn"
+                    onclick="selectQuizOpt(2, 'steamed', this)"
+                  >
+                    <strong class="d-block text-oat">Silky Steamed Milk</strong>
+                    <span class="fs-8 text-muted-dark"
+                      >Micro-foamed oat, almond, or whole milk.</span
+                    >
+                  </button>
+                  <button
+                    class="quiz-opt-btn"
+                    onclick="selectQuizOpt(2, 'iced', this)"
+                  >
+                    <strong class="d-block text-oat">Chilled over Ice</strong>
+                    <span class="fs-8 text-muted-dark"
+                      >Slow steep cold brew or iced latte.</span
+                    >
+                  </button>
+                </div>
+              </div>
+
+              <!-- Result Step -->
+              <div class="quiz-step d-none" id="stepResult">
+                <div class="text-center py-3">
+                  <span
+                    class="badge bg-mocha text-gold border border-glass px-3 py-1 rounded-pill mb-3 fs-8"
+                    >YOUR MATCHED BREW</span
+                  >
+                  <h3
+                    class="fw-bold text-oat font-serif mb-2"
+                    id="recommendTitle"
+                  >
+                    Signature Velvet Latte
+                  </h3>
+                  <p class="text-muted-dark fs-7 mb-4" id="recommendDesc">
+                    A velvety blend of espresso with Madagascar vanilla and
+                    creamy oat micro-foam.
+                  </p>
+
+                  <div
+                    class="p-3 bg-espresso rounded-3 border border-glass d-inline-block text-start mb-4 max-w-sm w-100"
+                  >
+                    <div
+                      class="d-flex justify-content-between fs-8 text-muted-dark mb-1"
+                    >
+                      <span>Flavor Profile:</span>
+                      <strong class="text-gold" id="recommendNotes"
+                        >Caramel & Vanilla</strong
+                      >
+                    </div>
+                    <div
+                      class="d-flex justify-content-between fs-8 text-muted-dark"
+                    >
+                      <span>Recommended Milk:</span>
+                      <strong class="text-oat" id="recommendMilk"
+                        >Oat Milk</strong
+                      >
+                    </div>
+                  </div>
+
+                  <div>
+                    <button
+                      class="btn btn-gold w-100 py-3 font-semibold"
+                      onclick="orderRecommended()"
+                    >
+                      Customize & Order This Brew
+                      <i class="fa-solid fa-arrow-right ms-2"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- 6. Ambient Cafe Gallery -->
     <section id="vibe" class="py-5 bg-mocha border-top border-glass">
-        <div class="container py-4">
-            <div class="text-center max-w-2xl mx-auto mb-5">
-                <span class="badge bg-espresso text-gold border border-glass px-3 py-2 rounded-pill mb-2 fs-8">THE ATMOSPHERE</span>
-                <h2 class="display-5 fw-bold text-oat font-serif">Ambient Cafe Vibe</h2>
-                <p class="text-muted-dark">Designed for focused creation, quiet conversations, and morning rituals.</p>
-            </div>
-
-            <!-- Gallery Mosaic -->
-            <div class="row g-3">
-                <div class="col-md-8">
-                    <div class="rounded-4 overflow-hidden border border-glass position-relative" style="height: 320px;">
-                        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1200&q=80" class="w-100 h-100 object-fit-cover" alt="Interior Vibe">
-                        <div class="position-absolute bottom-0 start-0 m-3 badge bg-espresso text-gold border border-glass">Downtown Flagship Lounge</div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="rounded-4 overflow-hidden border border-glass position-relative" style="height: 320px;">
-                        <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=800&q=80" class="w-100 h-100 object-fit-cover" alt="Latte Art Barista">
-                        <div class="position-absolute bottom-0 start-0 m-3 badge bg-espresso text-gold border border-glass">Master Barista Bar</div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="rounded-4 overflow-hidden border border-glass position-relative" style="height: 260px;">
-                        <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=800&q=80" class="w-100 h-100 object-fit-cover" alt="Roastery Area">
-                        <div class="position-absolute bottom-0 start-0 m-3 badge bg-espresso text-gold border border-glass">Micro-Roasting Bay</div>
-                    </div>
-                </div>
-                <div class="col-md-8">
-                    <div class="rounded-4 overflow-hidden border border-glass position-relative" style="height: 260px;">
-                        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=80" class="w-100 h-100 object-fit-cover" alt="Outdoor Seating">
-                        <div class="position-absolute bottom-0 start-0 m-3 badge bg-espresso text-gold border border-glass">Arts District Patio</div>
-                    </div>
-                </div>
-            </div>
+      <div class="container py-4">
+        <div class="text-center max-w-2xl mx-auto mb-5">
+          <span
+            class="badge bg-espresso text-gold border border-glass px-3 py-2 rounded-pill mb-2 fs-8"
+            >THE ATMOSPHERE</span
+          >
+          <h2 class="display-5 fw-bold text-oat font-serif">
+            Ambient Cafe Vibe
+          </h2>
+          <p class="text-muted-dark">
+            Designed for focused creation, quiet conversations, and morning
+            rituals.
+          </p>
         </div>
+
+        <!-- Gallery Mosaic -->
+        <div class="row g-3">
+          <div class="col-md-8">
+            <div
+              class="rounded-4 overflow-hidden border border-glass position-relative"
+              style="height: 320px"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1200&q=80"
+                class="w-100 h-100 object-fit-cover"
+                alt="Interior Vibe"
+              />
+              <div
+                class="position-absolute bottom-0 start-0 m-3 badge bg-espresso text-gold border border-glass"
+              >
+                Downtown Flagship Lounge
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div
+              class="rounded-4 overflow-hidden border border-glass position-relative"
+              style="height: 320px"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=800&q=80"
+                class="w-100 h-100 object-fit-cover"
+                alt="Latte Art Barista"
+              />
+              <div
+                class="position-absolute bottom-0 start-0 m-3 badge bg-espresso text-gold border border-glass"
+              >
+                Master Barista Bar
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div
+              class="rounded-4 overflow-hidden border border-glass position-relative"
+              style="height: 260px"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=800&q=80"
+                class="w-100 h-100 object-fit-cover"
+                alt="Roastery Area"
+              />
+              <div
+                class="position-absolute bottom-0 start-0 m-3 badge bg-espresso text-gold border border-glass"
+              >
+                Micro-Roasting Bay
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div
+              class="rounded-4 overflow-hidden border border-glass position-relative"
+              style="height: 260px"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=80"
+                class="w-100 h-100 object-fit-cover"
+                alt="Outdoor Seating"
+              />
+              <div
+                class="position-absolute bottom-0 start-0 m-3 badge bg-espresso text-gold border border-glass"
+              >
+                Arts District Patio
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- 7. Impact & Sustainability Metrics -->
     <section class="py-5 bg-espresso border-top border-glass">
-        <div class="container py-3">
-            <div class="row g-4 text-center">
-                <div class="col-md-4">
-                    <div class="p-4 rounded-4 bg-mocha border border-glass">
-                        <h2 class="display-4 fw-bold text-gold font-serif mb-1">100%</h2>
-                        <div class="fw-bold text-oat mb-1">Direct-Trade Certified</div>
-                        <p class="text-muted-dark fs-7 mb-0">Every green coffee bean is sourced through transparent partner relationships.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="p-4 rounded-4 bg-mocha border border-glass">
-                        <h2 class="display-4 fw-bold text-gold font-serif mb-1">0%</h2>
-                        <p class="fw-bold text-oat mb-1">Single-Use Plastics</p>
-                        <p class="text-muted-dark fs-7 mb-0">Compostable plant-based cold cups & biodegradable takeaway packaging.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="p-4 rounded-4 bg-mocha border border-glass">
-                        <h2 class="display-4 fw-bold text-gold font-serif mb-1">24k+</h2>
-                        <p class="fw-bold text-oat mb-1">Craft Cups Served</p>
-                        <p class="text-muted-dark fs-7 mb-0">Loved by neighborhood locals, remote creators & coffee purists.</p>
-                    </div>
-                </div>
+      <div class="container py-3">
+        <div class="row g-4 text-center">
+          <div class="col-md-4">
+            <div class="p-4 rounded-4 bg-mocha border border-glass">
+              <h2 class="display-4 fw-bold text-gold font-serif mb-1">100%</h2>
+              <div class="fw-bold text-oat mb-1">Direct-Trade Certified</div>
+              <p class="text-muted-dark fs-7 mb-0">
+                Every green coffee bean is sourced through transparent partner
+                relationships.
+              </p>
             </div>
+          </div>
+          <div class="col-md-4">
+            <div class="p-4 rounded-4 bg-mocha border border-glass">
+              <h2 class="display-4 fw-bold text-gold font-serif mb-1">0%</h2>
+              <p class="fw-bold text-oat mb-1">Single-Use Plastics</p>
+              <p class="text-muted-dark fs-7 mb-0">
+                Compostable plant-based cold cups & biodegradable takeaway
+                packaging.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="p-4 rounded-4 bg-mocha border border-glass">
+              <h2 class="display-4 fw-bold text-gold font-serif mb-1">24k+</h2>
+              <p class="fw-bold text-oat mb-1">Craft Cups Served</p>
+              <p class="text-muted-dark fs-7 mb-0">
+                Loved by neighborhood locals, remote creators & coffee purists.
+              </p>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- 8. Interactive Store Finder & Hours -->
     <section id="locations" class="py-5 bg-mocha border-top border-glass">
-        <div class="container py-4">
-            <div class="row g-4 g-lg-5 align-items-center">
-                <div class="col-lg-5">
-                    <span class="badge bg-espresso text-gold border border-glass px-3 py-2 rounded-pill mb-3 fs-8">LOCATIONS & HOURS</span>
-                    <h2 class="display-5 fw-bold text-oat font-serif mb-3">Visit Our Sanctuaries</h2>
-                    <p class="text-muted-dark mb-4">Choose your nearest Velvet & Bean location for live crowd updates, directions, and walk-in pickups.</p>
+      <div class="container py-4">
+        <div class="row g-4 g-lg-5 align-items-center">
+          <div class="col-lg-5">
+            <span
+              class="badge bg-espresso text-gold border border-glass px-3 py-2 rounded-pill mb-3 fs-8"
+              >LOCATIONS & HOURS</span
+            >
+            <h2 class="display-5 fw-bold text-oat font-serif mb-3">
+              Visit Our Sanctuaries
+            </h2>
+            <p class="text-muted-dark mb-4">
+              Choose your nearest Velvet & Bean location for live crowd updates,
+              directions, and walk-in pickups.
+            </p>
 
-                    <div class="d-flex flex-column gap-3" id="locationSelector">
-                        <div class="location-card active" onclick="switchLocation('flagship', this)">
-                            <div class="d-flex justify-content-between align-items-center mb-1">
-                                <h6 class="fw-bold text-oat font-serif mb-0">1. Downtown Flagship & Roastery</h6>
-                                <span class="badge bg-espresso text-gold border border-glass fs-8">Main Bar</span>
-                            </div>
-                            <p class="text-muted-dark fs-7 mb-2"><i class="fa-solid fa-location-dot me-1 text-gold"></i> 482 Grand Avenue, Suite 100</p>
-                            <div class="d-flex justify-content-between fs-8">
-                                <span class="text-gold"><i class="fa-solid fa-users me-1"></i> Current Vibe: Moderate</span>
-                                <span class="text-oat">Open until 9:00 PM</span>
-                            </div>
-                        </div>
-
-                        <div class="location-card" onclick="switchLocation('arts', this)">
-                            <div class="d-flex justify-content-between align-items-center mb-1">
-                                <h6 class="fw-bold text-oat font-serif mb-0">2. Arts District Espresso Lab</h6>
-                                <span class="badge bg-espresso text-gold border border-glass fs-8">Patio Bar</span>
-                            </div>
-                            <p class="text-muted-dark fs-7 mb-2"><i class="fa-solid fa-location-dot me-1 text-gold"></i> 1109 Canvas Street</p>
-                            <div class="d-flex justify-content-between fs-8">
-                                <span class="text-gold"><i class="fa-solid fa-users me-1"></i> Current Vibe: Quiet & Cozy</span>
-                                <span class="text-oat">Open until 7:00 PM</span>
-                            </div>
-                        </div>
-                    </div>
+            <div class="d-flex flex-column gap-3" id="locationSelector">
+              <div
+                class="location-card active"
+                onclick="switchLocation('flagship', this)"
+              >
+                <div
+                  class="d-flex justify-content-between align-items-center mb-1"
+                >
+                  <h6 class="fw-bold text-oat font-serif mb-0">
+                    1. Downtown Flagship & Roastery
+                  </h6>
+                  <span
+                    class="badge bg-espresso text-gold border border-glass fs-8"
+                    >Main Bar</span
+                  >
                 </div>
-
-                <div class="col-lg-7">
-                    <div class="glass-card p-4 p-sm-5 border border-glass text-center position-relative">
-                        <div class="p-4 bg-espresso rounded-4 border border-glass mb-4">
-                            <i class="fa-solid fa-map-location-dot text-gold fs-1 mb-3"></i>
-                            <h4 class="fw-bold text-oat font-serif mb-2" id="locTitle">Downtown Flagship & Roastery</h4>
-                            <p class="text-muted-dark fs-7 mb-3" id="locAddress">482 Grand Avenue, Suite 100 — (555) 234-8901</p>
-                            
-                            <div class="row g-3 text-start fs-7 border-top border-glass pt-3 mt-2">
-                                <div class="col-6">
-                                    <strong class="d-block text-gold">Monday – Friday:</strong>
-                                    <span class="text-oat">6:30 AM – 9:00 PM</span>
-                                </div>
-                                <div class="col-6">
-                                    <strong class="d-block text-gold">Saturday – Sunday:</strong>
-                                    <span class="text-oat">7:00 AM – 10:00 PM</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <a href="https://maps.google.com" target="_blank" class="btn btn-gold w-100 py-3 font-semibold">
-                            Get Driving Directions <i class="fa-solid fa-arrow-up-right-from-square ms-2"></i>
-                        </a>
-                    </div>
+                <p class="text-muted-dark fs-7 mb-2">
+                  <i class="fa-solid fa-location-dot me-1 text-gold"></i> 482
+                  Grand Avenue, Suite 100
+                </p>
+                <div class="d-flex justify-content-between fs-8">
+                  <span class="text-gold"
+                    ><i class="fa-solid fa-users me-1"></i> Current Vibe:
+                    Moderate</span
+                  >
+                  <span class="text-oat">Open until 9:00 PM</span>
                 </div>
+              </div>
+
+              <div class="location-card" onclick="switchLocation('arts', this)">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-1"
+                >
+                  <h6 class="fw-bold text-oat font-serif mb-0">
+                    2. Arts District Espresso Lab
+                  </h6>
+                  <span
+                    class="badge bg-espresso text-gold border border-glass fs-8"
+                    >Patio Bar</span
+                  >
+                </div>
+                <p class="text-muted-dark fs-7 mb-2">
+                  <i class="fa-solid fa-location-dot me-1 text-gold"></i> 1109
+                  Canvas Street
+                </p>
+                <div class="d-flex justify-content-between fs-8">
+                  <span class="text-gold"
+                    ><i class="fa-solid fa-users me-1"></i> Current Vibe: Quiet
+                    & Cozy</span
+                  >
+                  <span class="text-oat">Open until 7:00 PM</span>
+                </div>
+              </div>
             </div>
+          </div>
+
+          <div class="col-lg-7">
+            <div
+              class="glass-card p-4 p-sm-5 border border-glass text-center position-relative"
+            >
+              <div class="p-4 bg-espresso rounded-4 border border-glass mb-4">
+                <i class="fa-solid fa-map-location-dot text-gold fs-1 mb-3"></i>
+                <h4 class="fw-bold text-oat font-serif mb-2" id="locTitle">
+                  Downtown Flagship & Roastery
+                </h4>
+                <p class="text-muted-dark fs-7 mb-3" id="locAddress">
+                  482 Grand Avenue, Suite 100 — (555) 234-8901
+                </p>
+
+                <div
+                  class="row g-3 text-start fs-7 border-top border-glass pt-3 mt-2"
+                >
+                  <div class="col-6">
+                    <strong class="d-block text-gold">Monday – Friday:</strong>
+                    <span class="text-oat">6:30 AM – 9:00 PM</span>
+                  </div>
+                  <div class="col-6">
+                    <strong class="d-block text-gold"
+                      >Saturday – Sunday:</strong
+                    >
+                    <span class="text-oat">7:00 AM – 10:00 PM</span>
+                  </div>
+                </div>
+              </div>
+
+              <a
+                href="https://maps.google.com"
+                target="_blank"
+                class="btn btn-gold w-100 py-3 font-semibold"
+              >
+                Get Driving Directions
+                <i class="fa-solid fa-arrow-up-right-from-square ms-2"></i>
+              </a>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- 9. Footer & Loyalty Newsletter -->
     <footer class="py-5 bg-espresso border-top border-glass">
-        <div class="container py-4">
-            <div class="row g-4 g-lg-5 mb-5">
-                <div class="col-lg-5">
-                    <a class="navbar-brand d-inline-flex align-items-center gap-2 mb-3" href="#">
-                        <span class="p-2 rounded-circle bg-mocha text-gold border border-glass d-inline-flex align-items-center justify-content-center" style="width:38px; height:38px;">
-                            <i class="fa-solid fa-mug-saucer fs-6"></i>
-                        </span>
-                        <span class="font-serif fw-bold text-oat fs-4">VELVET <span class="text-gold">&</span> BEAN</span>
-                    </a>
-                    <p class="text-muted-dark fs-7 mb-4">
-                        Join the Velvet Coffee Club for exclusive access to micro-lot bean releases, home brewing masterclasses, and secret seasonal menu drops.
-                    </p>
+      <div class="container py-4">
+        <div class="row g-4 g-lg-5 mb-5">
+          <div class="col-lg-5">
+            <a
+              class="navbar-brand d-inline-flex align-items-center gap-2 mb-3"
+              href="#"
+            >
+              <span
+                class="p-2 rounded-circle bg-mocha text-gold border border-glass d-inline-flex align-items-center justify-content-center"
+                style="width: 38px; height: 38px"
+              >
+                <i class="fa-solid fa-mug-saucer fs-6"></i>
+              </span>
+              <span class="font-serif fw-bold text-oat fs-4"
+                >VELVET <span class="text-gold">&</span> BEAN</span
+              >
+            </a>
+            <p class="text-muted-dark fs-7 mb-4">
+              Join the Velvet Coffee Club for exclusive access to micro-lot bean
+              releases, home brewing masterclasses, and secret seasonal menu
+              drops.
+            </p>
 
-                    <!-- Newsletter Sign Up -->
-                    <form onsubmit="handleNewsletter(event)" class="d-flex gap-2">
-                        <input type="email" class="form-control form-control-dark" placeholder="Enter your email address" required>
-                        <button type="submit" class="btn btn-gold text-nowrap">Join Club</button>
-                    </form>
-                </div>
+            <!-- Newsletter Sign Up -->
+            <form onsubmit="handleNewsletter(event)" class="d-flex gap-2">
+              <input
+                type="email"
+                class="form-control form-control-dark"
+                placeholder="Enter your email address"
+                required
+              />
+              <button type="submit" class="btn btn-gold text-nowrap">
+                Join Club
+              </button>
+            </form>
+          </div>
 
-                <div class="col-6 col-lg-3 ms-auto">
-                    <h6 class="fw-bold text-oat font-serif mb-3">Quick Navigation</h6>
-                    <ul class="list-unstyled d-flex flex-column gap-2 fs-7 text-muted-dark">
-                        <li><a href="#menu" class="text-decoration-none text-muted-dark hover-gold">Espresso Menu</a></li>
-                        <li><a href="#roasting" class="text-decoration-none text-muted-dark hover-gold">Direct-Trade Story</a></li>
-                        <li><a href="#quiz" class="text-decoration-none text-muted-dark hover-gold">Brew Quiz Widget</a></li>
-                        <li><a href="#locations" class="text-decoration-none text-muted-dark hover-gold">Store Locations</a></li>
-                    </ul>
-                </div>
+          <div class="col-6 col-lg-3 ms-auto">
+            <h6 class="fw-bold text-oat font-serif mb-3">Quick Navigation</h6>
+            <ul
+              class="list-unstyled d-flex flex-column gap-2 fs-7 text-muted-dark"
+            >
+              <li>
+                <a
+                  href="#menu"
+                  class="text-decoration-none text-muted-dark hover-gold"
+                  >Espresso Menu</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#roasting"
+                  class="text-decoration-none text-muted-dark hover-gold"
+                  >Direct-Trade Story</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#quiz"
+                  class="text-decoration-none text-muted-dark hover-gold"
+                  >Brew Quiz Widget</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#locations"
+                  class="text-decoration-none text-muted-dark hover-gold"
+                  >Store Locations</a
+                >
+              </li>
+            </ul>
+          </div>
 
-                <div class="col-6 col-lg-3">
-                    <h6 class="fw-bold text-oat font-serif mb-3">Connect With Us</h6>
-                    <div class="d-flex gap-3 text-gold fs-5 mb-3">
-                        <a href="#" class="text-gold"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#" class="text-gold"><i class="fa-brands fa-tiktok"></i></a>
-                        <a href="#" class="text-gold"><i class="fa-brands fa-spotify"></i></a>
-                    </div>
-                    <p class="text-muted-dark fs-8">Scan QR code in-shop to sync your digital loyalty stamp card.</p>
-                </div>
+          <div class="col-6 col-lg-3">
+            <h6 class="fw-bold text-oat font-serif mb-3">Connect With Us</h6>
+            <div class="d-flex gap-3 text-gold fs-5 mb-3">
+              <a href="#" class="text-gold"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a href="#" class="text-gold"
+                ><i class="fa-brands fa-tiktok"></i
+              ></a>
+              <a href="#" class="text-gold"
+                ><i class="fa-brands fa-spotify"></i
+              ></a>
             </div>
-
-            <div class="pt-4 border-top border-glass text-center text-muted-dark fs-8">
-                <p class="mb-0">&copy; 2026 VELVET & BEAN Co. All Rights Reserved. Crafted with passion & espresso.</p>
-            </div>
+            <p class="text-muted-dark fs-8">
+              Scan QR code in-shop to sync your digital loyalty stamp card.
+            </p>
+          </div>
         </div>
+
+        <div
+          class="pt-4 border-top border-glass text-center text-muted-dark fs-8"
+        >
+          <p class="mb-0">
+            &copy; 2026 VELVET & BEAN Co. All Rights Reserved. Crafted with
+            passion & espresso.
+          </p>
+        </div>
+      </div>
     </footer>
 
     <!-- Interactive Customizer Modal -->
-    <div class="modal fade" id="customizerModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content modal-content-dark p-3">
-                <div class="modal-header border-0 pb-0">
-                    <div>
-                        <h4 class="modal-title font-serif fw-bold text-oat" id="modalItemTitle">Customize Beverage</h4>
-                        <span class="text-gold fw-bold fs-6" id="modalBasePrice">$6.50</span>
-                    </div>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="customizerForm">
-                        <!-- Milk Type -->
-                        <div class="mb-3">
-                            <label class="form-label fs-7 fw-semibold text-oat">Choose Milk / Dairy Base</label>
-                            <select class="form-select form-select-dark" id="milkSelect" onchange="updateCustomPrice()">
-                                <option value="0" selected>Oat Milk (House Specialty) [+$0.00]</option>
-                                <option value="0.75">Almond Milk [+$0.75]</option>
-                                <option value="0">Whole Milk [+$0.00]</option>
-                                <option value="1.00">Macadamia Milk [+$1.00]</option>
-                            </select>
-                        </div>
-
-                        <!-- Sweetness -->
-                        <div class="mb-3">
-                            <label class="form-label fs-7 fw-semibold text-oat">Sweetness & House Syrups</label>
-                            <select class="form-select form-select-dark" id="sweetSelect">
-                                <option value="normal" selected>Standard Sweetness</option>
-                                <option value="half">Half Sweet (50%)</option>
-                                <option value="unsweet">Unsweetened (0%)</option>
-                                <option value="vanilla">Madagascar Vanilla Bean [+$0.50]</option>
-                            </select>
-                        </div>
-
-                        <!-- Shots -->
-                        <div class="mb-4">
-                            <label class="form-label fs-7 fw-semibold text-oat">Espresso Extraction</label>
-                            <select class="form-select form-select-dark" id="shotSelect" onchange="updateCustomPrice()">
-                                <option value="0" selected>Double Ristretto (Standard)</option>
-                                <option value="1.25">Add Extra Espresso Shot [+$1.25]</option>
-                                <option value="0">Decaf Single-Origin Shot</option>
-                            </select>
-                        </div>
-
-                        <div class="p-3 bg-espresso rounded-3 border border-glass d-flex justify-content-between align-items-center mb-4">
-                            <span class="text-muted-dark fs-7">Calculated Total:</span>
-                            <span class="display-6 fw-bold text-gold font-serif" id="calculatedPrice">$6.50</span>
-                        </div>
-
-                        <button type="button" class="btn btn-gold w-100 py-3 font-semibold" onclick="confirmOrder()">
-                            Confirm & Add To Pickup Order <i class="fa-solid fa-check ms-2"></i>
-                        </button>
-                    </form>
-                </div>
+    <div
+      class="modal fade"
+      id="customizerModal"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content modal-content-dark p-3">
+          <div class="modal-header border-0 pb-0">
+            <div>
+              <h4
+                class="modal-title font-serif fw-bold text-oat"
+                id="modalItemTitle"
+              >
+                Customize Beverage
+              </h4>
+              <span class="text-gold fw-bold fs-6" id="modalBasePrice"
+                >$6.50</span
+              >
             </div>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="customizerForm">
+              <!-- Milk Type -->
+              <div class="mb-3">
+                <label class="form-label fs-7 fw-semibold text-oat"
+                  >Choose Milk / Dairy Base</label
+                >
+                <select
+                  class="form-select form-select-dark"
+                  id="milkSelect"
+                  onchange="updateCustomPrice()"
+                >
+                  <option value="0" selected>
+                    Oat Milk (House Specialty) [+$0.00]
+                  </option>
+                  <option value="0.75">Almond Milk [+$0.75]</option>
+                  <option value="0">Whole Milk [+$0.00]</option>
+                  <option value="1.00">Macadamia Milk [+$1.00]</option>
+                </select>
+              </div>
+
+              <!-- Sweetness -->
+              <div class="mb-3">
+                <label class="form-label fs-7 fw-semibold text-oat"
+                  >Sweetness & House Syrups</label
+                >
+                <select class="form-select form-select-dark" id="sweetSelect">
+                  <option value="normal" selected>Standard Sweetness</option>
+                  <option value="half">Half Sweet (50%)</option>
+                  <option value="unsweet">Unsweetened (0%)</option>
+                  <option value="vanilla">
+                    Madagascar Vanilla Bean [+$0.50]
+                  </option>
+                </select>
+              </div>
+
+              <!-- Shots -->
+              <div class="mb-4">
+                <label class="form-label fs-7 fw-semibold text-oat"
+                  >Espresso Extraction</label
+                >
+                <select
+                  class="form-select form-select-dark"
+                  id="shotSelect"
+                  onchange="updateCustomPrice()"
+                >
+                  <option value="0" selected>
+                    Double Ristretto (Standard)
+                  </option>
+                  <option value="1.25">Add Extra Espresso Shot [+$1.25]</option>
+                  <option value="0">Decaf Single-Origin Shot</option>
+                </select>
+              </div>
+
+              <div
+                class="p-3 bg-espresso rounded-3 border border-glass d-flex justify-content-between align-items-center mb-4"
+              >
+                <span class="text-muted-dark fs-7">Calculated Total:</span>
+                <span
+                  class="display-6 fw-bold text-gold font-serif"
+                  id="calculatedPrice"
+                  >$6.50</span
+                >
+              </div>
+
+              <button
+                type="button"
+                class="btn btn-gold w-100 py-3 font-semibold"
+                onclick="confirmOrder()"
+              >
+                Confirm & Add To Pickup Order
+                <i class="fa-solid fa-check ms-2"></i>
+              </button>
+            </form>
+          </div>
         </div>
+      </div>
     </div>
 
     <!-- Bootstrap 5.3 JS Bundle -->
@@ -707,5 +1284,5 @@
 
     <!-- Custom Interactive JS Logic -->
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
